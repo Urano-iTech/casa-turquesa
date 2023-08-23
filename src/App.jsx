@@ -1,11 +1,16 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 import "./styles/Home.css";
 
+
+
 export default function Home() {
   return (
-    <main className="main">
+    <main className="bg">
       <div className="container">
         <div className="header">
+
+        
+
           <h1 className="title">
             Welcome to{" "}
             <span className="gradient-text-0">
@@ -19,12 +24,16 @@ export default function Home() {
             </span>
           </h1>
 
+          
+
+          <h1 className="bg-green-800 text-3x1 font-serif">Hola mis amores</h1>
+
           <p className="description">
             Configuring your desired network {" "}
            
           </p>
 
-          <div className="connect">
+         <div className="connect">
             <ConnectWallet
               dropdownPosition={{
                 side: "bottom",
@@ -32,6 +41,7 @@ export default function Home() {
               }}
             />
           </div>
+
         </div>
 
         <div className="grid">
