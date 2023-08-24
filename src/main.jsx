@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import "./styles/globals.css";
+import { BrowserRouter as Router } from 'react-router-dom' 
 
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
@@ -17,7 +18,9 @@ root.render(
       clientId={import.meta.env.VITE_TEMPLATE_CLIENT_ID}
       activeChain={activeChain}
     >
+      <Router>
       <App />
+      </Router>
     </ThirdwebProvider>
   </React.StrictMode>
 );
