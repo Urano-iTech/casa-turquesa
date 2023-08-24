@@ -26,7 +26,7 @@ export default function Home() {
 
           
 
-          <h1 className="bg-green-800 text-3x1 font-serif">Hola mis amores</h1>
+          
 
           <p className="description">
             Configuring your desired network {" "}
