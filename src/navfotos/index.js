@@ -13,6 +13,11 @@ import money from './money.svg';
 import loader from './loader.svg';
 import thirdweb from './thirdweb.png';
 import turquesa from './turquesa.gif'
+import community from './community.svg'
+import home from './home.svg'
+import members from './members.svg'
+import dinero from './dinero.svg'
+import Neo from './neo_pool.png'
 
 export {
   tagType,
@@ -30,4 +35,9 @@ export {
   loader,
   thirdweb,
   turquesa,
+  community,
+  home,
+  members,
+  dinero,
+ Neo,
 };

@@ -13,19 +13,19 @@ const [isActive, setIsActive] = useState
 const [toggleDrawer, setToggleDrawer] = useState
 (false);
 
-const address = '0xabcd....';
+
 
 
   return (
 <div className='flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6'>
-<div className='lg:flex-1 flex flex-row max-w-[458px] py-2 pl-4 pr-2 h-[52px] bg-[#1c1c24] rounded-[100px]'>
+<div className='lg:flex-1 flex flex-row max-w-[458px] py-4 pl-4 pr-2 h-[52px] bg-[#ffffffff] rounded-[100px] shadow-2xl'>
 
-<input type="text" placeholder='Buscar Propiedades' className='flex w-full font-epilogue font-normal text-[14px] placeholder:text-[#4b5264] text-white bg-transparent outline-none' />
+ <input type="text" placeholder='Buscar Propiedades' className='flex w-full font-epilogue font-normal text-[14px] placeholder:text-[#4b5264] text-white bg-transparent outline-none shadow-secondary' />
 
 
-<div className='w-[72px] h-full rounded-[20px] bg-[#4acd8d] flex justify-center items-center cursor-pointer'>
+{/** <div className='w-[72px] h-full rounded-[20px] bg-[#fff] flex justify-center items-center cursor-pointer'>
 <img  src={search} alt="search" className='w-[15px] h-[15px] object-contain'/>
-</div>
+</div>*/}
 </div>
 
 
@@ -54,19 +54,19 @@ const address = '0xabcd....';
 <ConnectWallet
               dropdownPosition={{
                 side: "bottom",
-                align: "",
+                align: "center",
               }}
             />
 <Link to="/Profile">
-<div className='w-[40px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer'>
+{/**<div className='w-[40px] h-[52px] rounded-full bg-[#f3f3] flex justify-center items-center cursor-pointer'>
   <img src={thirdweb} alt="user" className='w-[60%] h-[60%] object-contain'/>
-</div>
+</div> */}
 </Link>
   </div>
 
 
   {/**Navegacion para Moviles */}
-  <div className="sm:hidden flex justify-between items-center relative">
+  <div className="sm:hidden flex justify-between items-center relative bg-transparent">
   <div className='w-[40px] h-[40px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer'>
   <img src={thirdweb} alt="user" className='w-[60%] h-[60%] object-contain'/>
 </div>
@@ -84,7 +84,7 @@ ${!toggleDrawer ? '-translate-y-[100vh]' : 'translate-y-0'} transition-all durat
  {navlinks.map((link) => (
   <li
   key={link.name}
-  className={`flex p-4 ${isActive === link.name && 'bg-[#3a3a3a]'}`}
+  className={`flex p-4 ${isActive === link.name && 'bg-[#fafafa]'}`}
   onClick={() => {
     setIsActive(link.name);
     setToggleDrawer(false);
@@ -96,7 +96,7 @@ ${!toggleDrawer ? '-translate-y-[100vh]' : 'translate-y-0'} transition-all durat
      alt={link.name}
      className={`w-[24px] h-[24px] object-contain ${isActive === link.name ? 'grayscale-0' : 'grayscale'}`}
        />
-       <p className={`ml-[20px] font-epilogue font-semibold text-[14px] ${isActive === link.name ? 'text-[#1dc071]' : 'text-[#808191]'}`}>
+       <p className={`ml-[20px] font-epilogue font-semibold text-[14px] ${isActive === link.name ? 'text-[#1dc]' : 'text-[#808191]'}`}>
         {link.name}
         </p>
         
